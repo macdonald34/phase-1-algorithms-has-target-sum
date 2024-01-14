@@ -19,22 +19,21 @@ if (require.main === module) {
 
 module.exports = hasTargetSum;
 function hasTargetSum(arr, target) {
-  const numbersSeen = {}; // Create an object to store numbers seen so far
+  const numbersSeen = {}; 
 
   for (let num of arr) {
-    const difference = target - num; // Calculate the difference between target and the current number
+    const difference = target - num; 
 
     if (numbersSeen[difference]) {
-      return true; // Found a pair that adds up to the target
+      return true; 
     }
 
-    numbersSeen[num] = true; // Store the current number in the object
+    numbersSeen[num] = true; 
   }
 
-  return false; // No pair found
+  return false; 
 }
 
-// Test cases
 console.log(hasTargetSum([3, 8, 12, 4, 11, 7], 10)); // true
 console.log(hasTargetSum([22, 19, 4, 6, 30], 25)); // true
 console.log(hasTargetSum([1, 2, 5], 4)); // false
